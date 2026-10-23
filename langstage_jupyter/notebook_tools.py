@@ -769,7 +769,7 @@ class _Run:
 
 def _strip_ansi(text: str) -> str:
     """Remove terminal CSI control sequences from text returned to the agent."""
-    return re.sub(r"\x1b\\[[0-?]*[ -/]*[@-~]", "", text)
+    return re.sub(r"\x1b\[[0-?]*[ -/]*[@-~]", "", text)
 
 
 def _output_text(output) -> str:
